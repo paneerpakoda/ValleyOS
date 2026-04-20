@@ -112,6 +112,7 @@ After meaningful work, update the relevant doc — not all of them.
 - **`docs/project_status.md`** — update at end of each work session or when status changes. This is the living snapshot.
 - **`docs/changelog.md`** — add an entry under `[Unreleased]` for every PR that changes user-visible behavior, architecture, or docs. Bump version on release.
 - **`docs/architecture.md`** — update in the same PR as any structural change (new layer, new top-level folder, new key component, dependency added/removed).
+- **`docs/tools.md`** — update when a tool/MCP is installed, deferred, or ruled out. Bump "Last reviewed" whenever touched.
 - **`docs/project-spec.md`** — update when a *locked decision* changes (stack, schema, milestone scope, API surface). Changing this should be rare and deliberate. If a change touches the schema, also update §5 in the same PR.
 - **`docs/brainstorm.md`** — add new ideas, risks, or open questions here freely. This is the scratch space.
 - **`docs/phase-N-summary.md`** — write at the end of each phase, not mid-phase.
