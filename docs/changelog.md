@@ -15,12 +15,13 @@ Categories:
 ## [Unreleased]
 
 ### Added
-- `/update-docs-and-commit` slash command (`.claude/commands/update-docs-and-commit.md`) — analyzes branch changes, updates the right docs conditionally, stages and commits. Refuses to run on `main`.
+- `/update-docs-and-commit` slash command (`.claude/commands/update-docs-and-commit.md`) — analyzes branch changes, updates the right docs conditionally, stages and commits. Refuses to run on `main`. Now handles all four planned docs (`decisions.md`, `testing.md`, `deployment.md`, `known_issues.md`) on their respective triggers.
 
 ### Docs
 - Added `docs/architecture.md` (focused architecture overview, links to spec for detail).
 - Added `docs/changelog.md` (this file).
 - Added `docs/project_status.md` (living state-of-the-project doc).
+- Added `CLAUDE.md §8 → Planned docs` table — reserves paths and triggers for `decisions.md`, `testing.md`, `deployment.md`, `known_issues.md` without creating empty placeholders.
 
 ---
 

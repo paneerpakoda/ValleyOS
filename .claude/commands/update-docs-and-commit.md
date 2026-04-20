@@ -64,14 +64,29 @@ If none trigger, do not touch this file.
 
 Skip if the doc would say exactly the same thing after editing (date bump alone doesn't justify a commit).
 
-### `docs/decisions.md` — only if a decision was made
+### Planned docs — create only when their trigger fires
 
-If a *locked decision* changed or a new one was made:
+These four files have reserved paths but don't exist yet. See `CLAUDE.md §8 → Planned docs` for the canonical trigger table. Apply each rule independently; create the file on first trigger, then append on subsequent triggers.
 
-- If the file exists, append a new ADR-style entry: `## YYYY-MM-DD — <short title>` with **Context**, **Decision**, **Consequences**.
-- If the file does not exist and a decision was made, create it with a brief header explaining the format and the first entry.
+#### `docs/decisions.md`
+**Trigger:** a locked decision changed or a new significant product/technical decision was made on this branch.
+**On trigger:** append `## YYYY-MM-DD — <short title>` with **Context**, **Decision**, **Consequences**. Create the file with a brief format header on first use.
+**Skip if:** no decision was made — do not create the file.
 
-If no decision was made, skip — do not create the file.
+#### `docs/testing.md`
+**Trigger:** test runner appears in `package.json` for the first time (jest, vitest, @testing-library/*), OR a test config file lands (`jest.config.*`, `vitest.config.*`), OR the first test file is added.
+**On trigger:** create the file with: how to run tests, what to test at which layer (per `CLAUDE.md §7`), fixture conventions, and any setup gotchas.
+**Skip if:** no test infrastructure changed.
+
+#### `docs/deployment.md`
+**Trigger:** `eas.json` lands for the first time, OR a successful build artifact / install step is documented in this branch's work.
+**On trigger:** create the file with: build commands, signing/credentials notes, device install steps, version bump procedure.
+**Skip if:** nothing build-related changed.
+
+#### `docs/known_issues.md`
+**Trigger:** the user explicitly flagged a known issue, limitation, or recurring bug in this branch's work or in conversation. This one is hard to auto-detect — require an explicit signal, not a guess.
+**On trigger:** add an entry with title, what happens, workaround if any, upstream link if applicable.
+**Skip if:** no explicit "known issue" was raised — do not infer.
 
 ## Step 4 — Sanity check
 

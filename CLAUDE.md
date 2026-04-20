@@ -119,6 +119,19 @@ After meaningful work, update the relevant doc — not all of them.
 - **`README.md`** — keep the layout and stack sections accurate. Don't put detail here that belongs in `/docs`.
 - **`CLAUDE.md`** (this file) — update when a constraint, command, or convention changes. Keep it short.
 
+### Planned docs (paths reserved — create when triggered)
+
+These files don't exist yet on purpose. Empty placeholders rot into TODO lists; conventions in `CLAUDE.md` don't. Create the file the first time its trigger fires (the `/update-docs-and-commit` command will do this automatically for the ones it can detect).
+
+| Path | Trigger to create | Holds |
+|---|---|---|
+| `docs/decisions.md` | A locked decision changes, or a new significant product/technical decision is made | ADR-style entries: `## YYYY-MM-DD — <title>` with **Context**, **Decision**, **Consequences** |
+| `docs/testing.md` | First test runner wired into `package.json`, or first non-trivial logic module needs a documented test strategy | Test runner setup, what to test at which layer, fixtures conventions, how to run locally |
+| `docs/deployment.md` | First successful `eas build` produces a sideloadable APK | Build commands, signing/credentials, device install steps, version bumping, release checklist |
+| `docs/known_issues.md` | First time a real limitation or recurring bug is identified that won't be fixed immediately | One entry per issue: short title, what happens, workaround if any, link to upstream issue if applicable |
+
+Do **not** create any of these files preemptively. If you find yourself wanting to create one without a clear trigger, the convention probably belongs in `CLAUDE.md` instead.
+
 ## 9. Conventions (lightweight)
 
 - **TypeScript strict mode** assumed. No `any` without a comment explaining why.
