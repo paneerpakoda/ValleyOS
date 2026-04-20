@@ -2,13 +2,13 @@
 
 Living snapshot. Update at the end of each work session or when status changes meaningfully. Older snapshots are not preserved here — git history is the audit trail.
 
-**Last updated:** 2026-04-20 (Phase 2 Steps 7+8 complete — deferred installs, inventory captured)
+**Last updated:** 2026-04-20 (Phase 2 complete — summary written, ready for Phase 3)
 
 ---
 
 ## Current milestone
 
-**Phase 2 — Setup.** Preparing the project environment so building is smooth. Phase 2 ends when the v0 app can be built, installed, and opened on the target Android device.
+**Phase 2 — Setup: complete.** Ready to enter Phase 3 (Build). See [`phase-2-summary.md`](./phase-2-summary.md) for the end-of-phase reference.
 
 Stage in roadmap: pre-v0. See [`project-spec.md` §7.1](./project-spec.md) for v0 definition.
 

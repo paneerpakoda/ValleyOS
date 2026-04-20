@@ -2,7 +2,7 @@
 
 A calm companion app for efficient Stardew Valley runs. Mobile, offline-first, Android-only for MVP.
 
-> **Status:** Phase 2 — Setup. No code yet; planning artifacts are in [`/docs`](./docs).
+> **Status:** Phases 1 (Plan) and 2 (Setup) complete. Entering Phase 3 (Build). No app code yet; planning artifacts are in [`/docs`](./docs).
 
 ---
 
@@ -40,6 +40,7 @@ The thesis: scattered guide info → clear real-time steps + tracking + quick re
 - [Changelog](./docs/changelog.md) — what changed and when
 - [Brainstorm](./docs/brainstorm.md) — exploration doc with feature dump and risks
 - [Phase 1 summary](./docs/phase-1-summary.md) — locked decisions carried into Phase 2
+- [Phase 2 summary](./docs/phase-2-summary.md) — end-of-Setup reference; what's locked and what's still open for Phase 3
 - [Pressure tests](./docs/pressure-tests/) — adversarial reviews of each phase
 
 ## Branching

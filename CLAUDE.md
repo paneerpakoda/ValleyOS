@@ -2,7 +2,7 @@
 
 Project context for Claude Code. Keep this file high-signal — link to docs for detail.
 
-**Phase: 2 — Setup.** No app code yet. The folder scaffold and planning docs are in place; the Expo project is not yet initialized.
+**Phase: entering 3 — Build.** Phases 1 (Plan) and 2 (Setup) are complete. No app code yet; the Expo project is not yet initialized. See [`docs/phase-2-summary.md`](./docs/phase-2-summary.md) and [`docs/project_status.md`](./docs/project_status.md) for where things stand.
 
 ---
 
