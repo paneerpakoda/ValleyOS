@@ -109,14 +109,15 @@ Strategy not yet decided — to be designed alongside the first real logic modul
 
 After meaningful work, update the relevant doc — not all of them.
 
-- **`docs/project-spec.md`** — update when a *locked decision* changes (stack, schema, milestone scope, API surface). Changing this should be rare and deliberate.
+- **`docs/project_status.md`** — update at end of each work session or when status changes. This is the living snapshot.
+- **`docs/changelog.md`** — add an entry under `[Unreleased]` for every PR that changes user-visible behavior, architecture, or docs. Bump version on release.
+- **`docs/architecture.md`** — update in the same PR as any structural change (new layer, new top-level folder, new key component, dependency added/removed).
+- **`docs/project-spec.md`** — update when a *locked decision* changes (stack, schema, milestone scope, API surface). Changing this should be rare and deliberate. If a change touches the schema, also update §5 in the same PR.
 - **`docs/brainstorm.md`** — add new ideas, risks, or open questions here freely. This is the scratch space.
 - **`docs/phase-N-summary.md`** — write at the end of each phase, not mid-phase.
 - **`docs/pressure-tests/`** — add a new file when a phase is pressure-tested.
 - **`README.md`** — keep the layout and stack sections accurate. Don't put detail here that belongs in `/docs`.
 - **`CLAUDE.md`** (this file) — update when a constraint, command, or convention changes. Keep it short.
-
-If a change touches the schema, also update `docs/project-spec.md` §5 in the same PR.
 
 ## 9. Conventions (lightweight)
 
