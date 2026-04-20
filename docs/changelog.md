@@ -14,6 +14,10 @@ Categories:
 
 ## [Unreleased]
 
+### Docs
+- Added `docs/tools.md` — tools & MCP inventory (installed / deferred with triggers / consciously skipped). Zero tools installed today; Phase 2 Steps 7+8 deliberately deferred until Expo scaffold lands.
+- Updated `CLAUDE.md §8` and `README.md` doc index to reference `tools.md`.
+
 ### Added
 - `/update-docs-and-commit` slash command (`.claude/commands/update-docs-and-commit.md`) — analyzes branch changes, updates the right docs conditionally, stages and commits. Refuses to run on `main`. Now handles all four planned docs (`decisions.md`, `testing.md`, `deployment.md`, `known_issues.md`) on their respective triggers.
 

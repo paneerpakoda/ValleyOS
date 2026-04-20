@@ -36,6 +36,7 @@ The thesis: scattered guide info → clear real-time steps + tracking + quick re
 - [Project status](./docs/project_status.md) — where the project stands right now
 - [Architecture](./docs/architecture.md) — system overview (links to spec for detail)
 - [Project spec](./docs/project-spec.md) — implementation-oriented spec (product, tech, architecture, schema, API, milestones)
+- [Tools & MCP servers](./docs/tools.md) — what's installed, deferred, and consciously skipped
 - [Changelog](./docs/changelog.md) — what changed and when
 - [Brainstorm](./docs/brainstorm.md) — exploration doc with feature dump and risks
 - [Phase 1 summary](./docs/phase-1-summary.md) — locked decisions carried into Phase 2
