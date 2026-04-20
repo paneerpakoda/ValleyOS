@@ -31,10 +31,11 @@ android/
 .easignore
 eas.json.local
 
-# Env
+# Env (commit .env.example only; never commit real .env files)
 .env
 .env.local
-.env.*.local
+.env.*
+!.env.example
 
 # TypeScript / build
 *.tsbuildinfo
