@@ -14,18 +14,18 @@ Categories:
 
 ## [Unreleased]
 
-### Docs
-- Added `docs/tools.md` — tools & MCP inventory (installed / deferred with triggers / consciously skipped). Zero tools installed today; Phase 2 Steps 7+8 deliberately deferred until Expo scaffold lands.
-- Updated `CLAUDE.md §8` and `README.md` doc index to reference `tools.md`.
-
 ### Added
-- `/update-docs-and-commit` slash command (`.claude/commands/update-docs-and-commit.md`) — analyzes branch changes, updates the right docs conditionally, stages and commits. Refuses to run on `main`. Now handles all four planned docs (`decisions.md`, `testing.md`, `deployment.md`, `known_issues.md`) on their respective triggers.
+- `/update-docs-and-commit` slash command (`.claude/commands/update-docs-and-commit.md`) — analyzes branch changes, updates the right docs conditionally, stages and commits. Refuses to run on `main`. Handles all four planned docs (`decisions.md`, `testing.md`, `deployment.md`, `known_issues.md`) on their respective triggers.
 
 ### Docs
 - Added `docs/architecture.md` (focused architecture overview, links to spec for detail).
 - Added `docs/changelog.md` (this file).
 - Added `docs/project_status.md` (living state-of-the-project doc).
+- Added `docs/tools.md` — tools & MCP inventory (installed / deferred with triggers / consciously skipped). Zero tools installed today; Phase 2 Steps 7+8 deliberately deferred until Expo scaffold lands.
+- Added `docs/phase-2-summary.md` — end-of-phase reference for Phase 2 (Setup).
 - Added `CLAUDE.md §8 → Planned docs` table — reserves paths and triggers for `decisions.md`, `testing.md`, `deployment.md`, `known_issues.md` without creating empty placeholders.
+- Updated `CLAUDE.md §8` and `README.md` doc index to reference `tools.md` and `phase-2-summary.md`.
+- Updated phase labels in `CLAUDE.md` and `README.md` to reflect Phase 2 complete.
 
 ---
 
