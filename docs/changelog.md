@@ -14,6 +14,9 @@ Categories:
 
 ## [Unreleased]
 
+### Added
+- `/update-docs-and-commit` slash command (`.claude/commands/update-docs-and-commit.md`) — analyzes branch changes, updates the right docs conditionally, stages and commits. Refuses to run on `main`.
+
 ### Docs
 - Added `docs/architecture.md` (focused architecture overview, links to spec for detail).
 - Added `docs/changelog.md` (this file).

@@ -20,17 +20,18 @@ Stage in roadmap: pre-v0. See [`project-spec.md` §7.1](./project-spec.md) for v
   - Step 2: Folder scaffold (`/app`, `/src`, `/content`, `/docs`, `/scripts`, `/assets`). ✅
   - Step 3: `.env.example` with honest minimal surface. ✅ ([#1](https://github.com/paneerpakoda/ValleyOS/pull/1))
   - Step 4: `CLAUDE.md` project memory. ✅ ([#2](https://github.com/paneerpakoda/ValleyOS/pull/2))
-  - Step 5: Automated docs (`architecture.md`, `changelog.md`, this file). 🟡 in progress
+  - Step 5: Automated docs (`architecture.md`, `changelog.md`, this file). 🟡 in progress (PR open)
+  - Step 6: `/update-docs-and-commit` slash command. 🟡 in progress (same PR)
 
 ## In progress
 
-- Step 5 — automated documentation files.
+- PR #3 — Steps 5 + 6 bundled (docs scaffold + doc-update workflow).
 
 ## Next priorities
 
 In order:
 
-1. **Finish Phase 2, Step 5** (this PR).
+1. **Merge PR #3.**
 2. **Lock dev-device workflow** — Expo Go vs custom dev client vs signed APK sideload from day one. Drives the next step.
 3. **Initialize the Expo app** — `npx create-expo-app` into a feature branch, wire TypeScript + expo-router + expo-sqlite, first route renders "hello".
 4. **Build pipeline working end-to-end** — open the empty app on the target Android phone. This is the Phase 2 exit gate.
