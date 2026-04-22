@@ -2,7 +2,7 @@
 
 A focused overview. The deep reference is [`project-spec.md`](./project-spec.md) §3–§6. This doc is the navigation layer; if you need detail, follow the link.
 
-> **Status: as-designed, not as-built.** No app code exists yet. This describes the intended shape; the first divergence from this document should update it in the same PR.
+> **Status: partially as-built.** S0 scaffold plus V0-1 today view have landed. SQLite, repos, and logic layer remain as-designed until V0-3+. The first divergence from this document should update it in the same PR.
 
 ---
 
@@ -45,7 +45,7 @@ SQLite                           ← run state only
 
 | Component | Responsibility | Lives in |
 |---|---|---|
-| `TodayView` | The home screen — ordered list of next steps for the current day | `/app/(today)/index.tsx` |
+| `TodayView` | The home screen — ordered list of next steps for the current day | `/app/index.tsx` (no route groups yet) |
 | `getTodayView` | Compose today's task list from run state + static content | `/src/logic/today.ts` |
 | `advanceDay` | Move to next day; auto-carry-forward incomplete tasks; compute missed deadlines | `/src/logic/advance-day.ts` |
 | `runRepo` | CRUD for `run`, `task_state`, `skipped_day_log`, `app_meta` | `/src/db/run-repo.ts` |
@@ -60,15 +60,27 @@ None. There's no backend, no auth, no analytics, no AI. The only external call i
 
 ## Dependencies (intended)
 
+Installed (S0):
+
 | Package | Why |
 |---|---|
-| `expo` | Toolchain |
-| `expo-router` | File-based routing |
-| `expo-sqlite` | On-device DB |
-| `react-native` | Runtime |
-| `typescript` | Strict mode |
+| `expo` (SDK 54) | Toolchain |
+| `expo-router` (6.x) | File-based routing |
+| `expo-linking` | External wiki links (used at V0-6) |
+| `expo-status-bar`, `expo-system-ui`, `expo-splash-screen` | Boot + chrome |
+| `expo-constants` | Runtime constants for repos/migrations |
+| `react` 19, `react-native` 0.81 | Runtime |
+| `react-native-gesture-handler`, `react-native-reanimated`, `react-native-worklets`, `react-native-safe-area-context`, `react-native-screens` | Required by expo-router |
+| `@react-navigation/native` | expo-router peer |
+| `typescript` (strict + `noUncheckedIndexedAccess`), `eslint`, `eslint-config-expo` | Dev |
 
-Linter, formatter, and test runner are TBD — see `CLAUDE.md §6`.
+Planned (not yet installed):
+
+| Package | Lands with |
+|---|---|
+| `expo-sqlite` | V0-3 (repo layer) |
+
+A test runner is TBD — landing alongside the first `/src/logic` module (see `docs/testing.md` when it's created per CLAUDE.md §8).
 
 ## Data shape (summary)
 
