@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Valley OS",
+    "slug": "valley-os",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "valleyos",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "android": {
+      "package": "com.valleyos.app",
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

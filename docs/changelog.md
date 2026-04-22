@@ -15,9 +15,13 @@ Categories:
 ## [Unreleased]
 
 ### Added
+- **S0 scaffold** — first real app code: `package.json`, `tsconfig.json`, `app.json`, `eslint.config.js`. Expo SDK 54 + expo-router 6 + React 19 + RN 0.81. Path aliases `@/*` → `./src/*` and `@content/*` → `./content/*`. TypeScript strict mode plus `noUncheckedIndexedAccess`.
+- **V0-1 today view** — `app/_layout.tsx` (single Stack) and `app/index.tsx` (hardcoded Day 1 task list, dark theme inline styles). Data module at `src/lib/sample-day-1.ts`.
+- **User-authored guide dump** — `docs/y1-spring-guide-raw.md` holds the player's own Y1 Spring notes; Day 1 drafted. Source for V0-2 JSON import.
 - `/update-docs-and-commit` slash command (`.claude/commands/update-docs-and-commit.md`) — analyzes branch changes, updates the right docs conditionally, stages and commits. Refuses to run on `main`. Handles all four planned docs (`decisions.md`, `testing.md`, `deployment.md`, `known_issues.md`) on their respective triggers.
 
 ### Docs
+- Added `docs/milestone-plan.md` — Phase 3 Step 2 artifact. Orders v0 and MVP into 7 + 9 thin vertical slices with dependencies and a parked open-questions list.
 - Added `docs/architecture.md` (focused architecture overview, links to spec for detail).
 - Added `docs/changelog.md` (this file).
 - Added `docs/project_status.md` (living state-of-the-project doc).
@@ -26,6 +30,10 @@ Categories:
 - Added `CLAUDE.md §8 → Planned docs` table — reserves paths and triggers for `decisions.md`, `testing.md`, `deployment.md`, `known_issues.md` without creating empty placeholders.
 - Updated `CLAUDE.md §8` and `README.md` doc index to reference `tools.md` and `phase-2-summary.md`.
 - Updated phase labels in `CLAUDE.md` and `README.md` to reflect Phase 2 complete.
+- Updated `docs/architecture.md` — `TodayView` lives at `/app/index.tsx` (no route groups yet); dependency table reflects the actual installed set (Expo 54, expo-router 6, Reanimated 4, RN Screens, Safe Area, Worklets, Splash Screen, System UI); `expo-sqlite` listed as **planned** until V0-3 lands.
+
+### Architecture
+- Adopted Expo's default new architecture (`newArchEnabled: true`), React Compiler experiment, and typed routes. Android-only build target; iOS and web intentionally stripped from `app.json` and `package.json`.
 
 ---
 

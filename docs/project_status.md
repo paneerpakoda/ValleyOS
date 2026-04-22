@@ -2,42 +2,56 @@
 
 Living snapshot. Update at the end of each work session or when status changes meaningfully. Older snapshots are not preserved here — git history is the audit trail.
 
-**Last updated:** 2026-04-20 (Phase 2 complete — summary written, ready for Phase 3)
+**Last updated:** 2026-04-22 (Phase 3 Step 3 — S0 scaffold + V0-1 today view in flight)
 
 ---
 
 ## Current milestone
 
-**Phase 2 — Setup: complete.** Ready to enter Phase 3 (Build). See [`phase-2-summary.md`](./phase-2-summary.md) for the end-of-phase reference.
+**Phase 3 — Build: in progress.** Phase 3 Step 2 complete ([`milestone-plan.md`](./milestone-plan.md) landed). Phase 3 Step 3 underway on branch `claude/compassionate-robinson-434708` — Expo scaffold and the first v0 slice folded into one PR.
 
-Stage in roadmap: pre-v0. See [`project-spec.md` §7.1](./project-spec.md) for v0 definition.
+Stage in roadmap: v0 spike (pre-MVP). See [`project-spec.md` §7.1](./project-spec.md) and [`milestone-plan.md`](./milestone-plan.md).
 
 ## Completed
 
 - **Phase 1 — Plan** ✅ (see [`phase-1-summary.md`](./phase-1-summary.md))
-- **Phase 2, Steps 1–4:**
-  - Step 1: GitHub repo created, `main` protected, branching rules in `CLAUDE.md`. ✅
-  - Step 2: Folder scaffold (`/app`, `/src`, `/content`, `/docs`, `/scripts`, `/assets`). ✅
-  - Step 3: `.env.example` with honest minimal surface. ✅ ([#1](https://github.com/paneerpakoda/ValleyOS/pull/1))
-  - Step 4: `CLAUDE.md` project memory. ✅ ([#2](https://github.com/paneerpakoda/ValleyOS/pull/2))
-  - Step 5: Automated docs (`architecture.md`, `changelog.md`, `project_status.md`). ✅
-  - Step 6: `/update-docs-and-commit` slash command. ✅
-  - Step 7+8: Tools & MCP — inventory captured in `docs/tools.md`; all installs deliberately deferred until Expo scaffold. ✅
+- **Phase 2 — Setup** ✅ (see [`phase-2-summary.md`](./phase-2-summary.md))
+- **Phase 3 Step 2** ✅ — [`milestone-plan.md`](./milestone-plan.md) committed; v0 and MVP slices sequenced.
 
 ## In progress
 
-- Nothing. Phase 2 setup steps (1–8) are done. Next: lock dev-device workflow, then initialize the Expo app.
+- **Phase 3 Step 3 — S0 scaffold + V0-1 today view** (branch: `claude/compassionate-robinson-434708`).
+  - Expo SDK 54 + expo-router + TypeScript strict + `noUncheckedIndexedAccess`.
+  - Path aliases: `@/*` → `./src/*`, `@content/*` → `./content/*`.
+  - Day 1 tasks rendered inline on the today screen (compressed from the raw dump to 10 ordered items).
+  - No SQLite yet; no completion state; no day control.
+- **User-authored Y1 Spring guide** at [`y1-spring-guide-raw.md`](./y1-spring-guide-raw.md) — Day 1 drafted, rest pending.
 
 ## Next priorities
 
 In order:
 
-1. **Lock dev-device workflow** — Expo Go vs custom dev client vs signed APK sideload from day one. Drives the next step.
-2. **Install library-docs MCP** (e.g. Context7) before `npx create-expo-app` — per `docs/tools.md`.
-3. **Install `eas-cli`** globally alongside the Expo scaffold.
-4. **Initialize the Expo app** — `npx create-expo-app` into a feature branch, wire TypeScript + expo-router + expo-sqlite, first route renders "hello".
-5. **Build pipeline working end-to-end** — open the empty app on the target Android phone. This is the Phase 2 exit gate.
-6. **Move into v0** — author hardcoded Y1 Spring days 1–7 task content, ship a build, play 3+ real sessions.
+1. Finish S0 + V0-1 PR — verify `npm run typecheck` and `npm run dev` on device, merge.
+2. **V0-2** — move Day 1 content to `/content/tasks/y1-spring.json`, adjust the image-handling question before the JSON shape is committed.
+3. **V0-3 / V0-4 / V0-5** — SQLite + repo + completion + advance-day.
+4. **V0-6** — per-task wiki link via `Linking.openURL`.
+5. **V0-7** — fill Y1 Spring days 1–7 (user authoring + JSON import).
+6. **v0 exit gate** — one real SDV session with the app in hand (scoped down from the spec's 3+ sessions by user preference; recorded in `milestone-plan.md`).
+7. Move to MVP slices M1–M9.
+
+## Blockers
+
+None.
+
+## Decisions pending
+
+| Decision | Why it matters | When to decide |
+|---|---|---|
+| Image handling (Obsidian `![[...]]` embeds in the raw guide) | Determines content JSON shape | Before V0-2 |
+| Dev-device workflow (Expo Go vs dev client vs signed APK) | Decides how the app reaches the phone during v0 | Before the v0 exit-gate session |
+| Atomic task granularity | Compressed 10-task v0 rendering vs fuller dump | Revisit after first real session |
+| Schema-migration strategy (concrete first cut) | Needed for V0-3 | When SQLite is wired (V0-3) |
+| Design system (typography, spacing, dark mode tokens) | Currently minimal inline styles | After v0 reveals what feels right |
 
 ## Blockers
 
