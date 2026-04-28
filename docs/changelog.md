@@ -35,6 +35,11 @@ Categories:
 ### Architecture
 - Adopted Expo's default new architecture (`newArchEnabled: true`), React Compiler experiment, and typed routes. Android-only build target; iOS and web intentionally stripped from `app.json` and `package.json`.
 
+### Dev workflow
+- Chose **Expo Go + tunnel mode** as the v0 dev-device workflow after LAN mode failed to reach the phone during V0-1 smoke testing (likely AP-isolation or a `utun` VPN capturing `192.168.1.x`). Full reasoning in [`docs/decisions.md`](./decisions.md). Added `npm run dev:tunnel` as the primary dev command; `@expo/ngrok@^4.1.3` installed as a devDependency.
+- `.gitignore` auto-updated by `expo` CLI to ignore `expo-env.d.ts` (regenerated on each `expo start`).
+- Added `docs/decisions.md` — first ADR entry covers the dev-device choice above (triggered per `CLAUDE.md §8`).
+
 ---
 
 ## [0.0.3] — 2026-04-20
