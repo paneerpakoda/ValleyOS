@@ -47,9 +47,17 @@ build/
 *.swp
 *.swo
 
-# Obsidian (docs vault metadata — keep workspace local)
+# Obsidian — track small config files, not workspace state, plugins, themes,
+# or scratch attachments that land at repo root.
 .obsidian/workspace*
 .obsidian/cache
+.obsidian/plugins/
+.obsidian/themes/
+/Pasted image *.png
+/Untitled*.base
+
+# Claude Code worktrees (harness state — can be very large)
+.claude/worktrees/
 
 # Logs / temp
 *.log

@@ -20,7 +20,11 @@ Categories:
 - **User-authored guide dump** — `docs/y1-spring-guide-raw.md` holds the player's own Y1 Spring notes; Day 1 drafted. Source for V0-2 JSON import.
 - `/update-docs-and-commit` slash command (`.claude/commands/update-docs-and-commit.md`) — analyzes branch changes, updates the right docs conditionally, stages and commits. Refuses to run on `main`. Handles all four planned docs (`decisions.md`, `testing.md`, `deployment.md`, `known_issues.md`) on their respective triggers.
 
+### Changed
+- Refined `.gitignore` Obsidian policy: track small config files but ignore installed plugin/theme binaries (`.obsidian/plugins/`, `.obsidian/themes/`) and root-level scratch attachments (`/Pasted image *.png`, `/Untitled*.base`). Also ignore `.claude/worktrees/` (Claude Code harness state, can be hundreds of MB). Refines, not reverses, the phase-2 "Obsidian settings travel with the repo" decision.
+
 ### Docs
+- Parked a third V0-2 open question in `docs/milestone-plan.md` — content-type richness for the JSON shape. References closed [PR #8](https://github.com/paneerpakoda/ValleyOS/pull/8) (`feature/early-test-proto`) for the rich-types alternative that was set aside in favor of the smaller "inline first" shape on main.
 - Added `docs/milestone-plan.md` — Phase 3 Step 2 artifact. Orders v0 and MVP into 7 + 9 thin vertical slices with dependencies and a parked open-questions list.
 - Added `docs/architecture.md` (focused architecture overview, links to spec for detail).
 - Added `docs/changelog.md` (this file).
