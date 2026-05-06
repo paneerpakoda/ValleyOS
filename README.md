@@ -20,6 +20,27 @@ The thesis: scattered guide info → clear real-time steps + tracking + quick re
 - **EAS Build** → signed APK → sideload to personal Android device
 - No backend, no auth, no cloud, no analytics, no AI
 
+## Run it
+
+Daily path: phone running [Expo Go](https://expo.dev/client), Mac on the same wifi.
+
+```bash
+npm install
+npm run dev          # LAN mode — scan the QR with Expo Go
+```
+
+If the QR loads but the phone can't reach the dev server (AP isolation, work VPN, etc.), use the ngrok fallback:
+
+```bash
+npm run dev:tunnel
+```
+
+Mac-only quick loop while the UI is still static (no native modules):
+
+```bash
+npm run web
+```
+
 ## Layout
 
 ```
