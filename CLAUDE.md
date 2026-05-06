@@ -76,21 +76,25 @@ UX failure test (from spec §6): *Can the user see what to do next within second
 
 ## 6. Commands
 
-App not yet scaffolded — most commands TBD. Current state:
-
 ```bash
+# Run it (Expo Go on device)
+npm run dev                        # LAN mode — daily path, phone + Mac on same wifi
+npm run dev:tunnel                 # ngrok fallback — use when LAN can't reach the phone (AP isolation, VPN, etc.)
+npm run web                        # Mac-only quick loop in the browser; fine while UI is static, no native modules
+
+# Quality
+npm run typecheck                  # tsc --noEmit
+npm run lint                       # eslint
+
 # Repo
 gh pr create                       # open PR for current branch
 gh pr merge <n> --squash --delete-branch
 ```
 
-To be filled in after the Expo scaffold lands:
+To be filled in as the stack grows:
 
 ```bash
-# npm run dev          # expo start (dev server)
-# npm run android      # expo run:android (dev build on device)
-# npm run typecheck    # tsc --noEmit
-# npm run lint         # eslint
+# npm run android      # expo run:android (dev build on device, once a custom dev client is needed)
 # npm run test         # jest / vitest (TBD)
 # npm run build        # eas build --platform android
 # npm run db:migrate   # apply pending migrations (runner TBD)
