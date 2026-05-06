@@ -16,6 +16,7 @@ Categories:
 
 ### Added
 - `/update-docs-and-commit` slash command (`.claude/commands/update-docs-and-commit.md`) — analyzes branch changes, updates the right docs conditionally, stages and commits. Refuses to run on `main`. Handles all four planned docs (`decisions.md`, `testing.md`, `deployment.md`, `known_issues.md`) on their respective triggers.
+- Early test proto: typed content layer (`src/logic/content-types.ts`) + first Y1 Spring task data (`content/tasks/y1-spring.json`). First concrete file under `/src/logic`. Not wired into any app code yet — pressure-tests the authoring shape before the Expo scaffold lands and feeds the open atomic-task-granularity decision.
 
 ### Docs
 - Added `docs/architecture.md` (focused architecture overview, links to spec for detail).
@@ -24,8 +25,10 @@ Categories:
 - Added `docs/tools.md` — tools & MCP inventory (installed / deferred with triggers / consciously skipped). Zero tools installed today; Phase 2 Steps 7+8 deliberately deferred until Expo scaffold lands.
 - Added `docs/phase-2-summary.md` — end-of-phase reference for Phase 2 (Setup).
 - Added `CLAUDE.md §8 → Planned docs` table — reserves paths and triggers for `decisions.md`, `testing.md`, `deployment.md`, `known_issues.md` without creating empty placeholders.
+- Added `docs/y1-spring-guide-raw.md` — raw guide source the proto task data was derived from; kept as authoring reference.
 - Updated `CLAUDE.md §8` and `README.md` doc index to reference `tools.md` and `phase-2-summary.md`.
 - Updated phase labels in `CLAUDE.md` and `README.md` to reflect Phase 2 complete.
+- Updated `docs/architecture.md` with `content-types` row and as-built status note now that the first file exists.
 
 ---
 

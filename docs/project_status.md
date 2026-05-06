@@ -2,7 +2,7 @@
 
 Living snapshot. Update at the end of each work session or when status changes meaningfully. Older snapshots are not preserved here — git history is the audit trail.
 
-**Last updated:** 2026-04-20 (Phase 2 complete — summary written, ready for Phase 3)
+**Last updated:** 2026-05-06 (early test proto on `feature/early-test-proto` — first content-layer types + Y1 Spring task data)
 
 ---
 
@@ -26,7 +26,7 @@ Stage in roadmap: pre-v0. See [`project-spec.md` §7.1](./project-spec.md) for v
 
 ## In progress
 
-- Nothing. Phase 2 setup steps (1–8) are done. Next: lock dev-device workflow, then initialize the Expo app.
+- **Early test proto** on `feature/early-test-proto` — typed content layer (`src/logic/content-types.ts`) + first Y1 Spring task data (`content/tasks/y1-spring.json`). Not wired into any app code; deliberately ahead of the scaffold to pressure-test authoring shape and inform the atomic-task-granularity decision.
 
 ## Next priorities
 
@@ -50,7 +50,7 @@ Carried from [`phase-1-summary.md`](./phase-1-summary.md) "Still open going into
 | Decision | Why it matters | When to decide |
 |---|---|---|
 | Dev-device workflow (Expo Go / dev client / APK sideload) | Determines what the scaffold needs and how iteration speed feels | Before Step 6 (Expo init) |
-| Atomic task definition (granularity of one task) | Affects content authoring throughput and today-view density | Early v0 — once we see real tasks on a real screen |
+| Atomic task definition (granularity of one task) | Affects content authoring throughput and today-view density. First proto data on `feature/early-test-proto` is the first concrete input. | Early v0 — once we see real tasks on a real screen |
 | v0 content source (hand-written vs placeholder) | Affects time budget for v0 | Just before v0 starts |
 | Time budget for v0 and MVP | Sets pace; not a deadline | Anytime — best to name a rough number now |
 | Schema-migration strategy (concrete first cut) | Needed once SQLite is wired | When the first migration is needed (during Expo init or shortly after) |

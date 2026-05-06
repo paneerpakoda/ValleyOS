@@ -2,7 +2,7 @@
 
 A focused overview. The deep reference is [`project-spec.md`](./project-spec.md) §3–§6. This doc is the navigation layer; if you need detail, follow the link.
 
-> **Status: as-designed, not as-built.** No app code exists yet. This describes the intended shape; the first divergence from this document should update it in the same PR.
+> **Status: as-designed, mostly not-as-built.** Only `src/logic/content-types.ts` exists today (early test proto, see changelog). The rest describes the intended shape; the first divergence from this document should update it in the same PR.
 
 ---
 
@@ -46,6 +46,7 @@ SQLite                           ← run state only
 | Component | Responsibility | Lives in |
 |---|---|---|
 | `TodayView` | The home screen — ordered list of next steps for the current day | `/app/(today)/index.tsx` |
+| `content-types` | Typed contract for bundled static content (`TaskTemplate` / `DayTemplate` / `SeasonContent`). The only component that exists today. | `/src/logic/content-types.ts` |
 | `getTodayView` | Compose today's task list from run state + static content | `/src/logic/today.ts` |
 | `advanceDay` | Move to next day; auto-carry-forward incomplete tasks; compute missed deadlines | `/src/logic/advance-day.ts` |
 | `runRepo` | CRUD for `run`, `task_state`, `skipped_day_log`, `app_meta` | `/src/db/run-repo.ts` |
