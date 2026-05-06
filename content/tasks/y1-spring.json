@@ -1,0 +1,106 @@
+{
+  "season": "spring",
+  "year": 1,
+  "days": [
+    {
+      "day": 1,
+      "summary": "Forage-heavy opener. Harvest starter parsnips, gather wood, run a full town-to-beach forage loop, then return to plant parsnips and clear the south exit before bed.",
+      "expectedOutcomes": [
+        "Foraging level 1 reached",
+        "~50 wood in storage",
+        "Most starter parsnips planted",
+        "One of each spring forageable reserved for Wild Seeds"
+      ],
+      "tasks": [
+        {
+          "id": "y1-spring-d01-harvest-parsnips",
+          "order": 1,
+          "timeHint": "6:00 AM",
+          "title": "Harvest the starter parsnips",
+          "instructions": "Wake at 6 AM and pick every parsnip on the farm. These are the 15 starter crops Lewis left behind.",
+          "category": "harvest",
+          "wikiUrl": "https://stardewvalleywiki.com/Parsnip"
+        },
+        {
+          "id": "y1-spring-d01-clear-stump",
+          "order": 2,
+          "title": "Clear the land around the big stump",
+          "instructions": "Chop weeds, small logs, and stones in the square around the large stump near spawn. This opens the space you'll plant parsnips in tonight.",
+          "category": "clear",
+          "wikiUrl": "https://stardewvalleywiki.com/The_Farm"
+        },
+        {
+          "id": "y1-spring-d01-chop-wood-50",
+          "order": 3,
+          "timeHint": "by 8:10 AM",
+          "title": "Gather ~50 wood",
+          "instructions": "Chop trees while clearing. Aim for roughly 50 wood so you can craft a chest and still have a reserve for tomorrow.",
+          "category": "chop",
+          "wikiUrl": "https://stardewvalleywiki.com/Wood"
+        },
+        {
+          "id": "y1-spring-d01-craft-chest",
+          "order": 4,
+          "timeHint": "by 8:30 AM",
+          "title": "Craft a chest and stash everything but tools",
+          "instructions": "Open the craft menu, make one chest (50 wood), drop it near the house. Store parsnips, seeds, and junk — keep only the scythe, hoe, axe, pickaxe, watering can, and a little food.",
+          "category": "craft",
+          "wikiUrl": "https://stardewvalleywiki.com/Chest"
+        },
+        {
+          "id": "y1-spring-d01-forage-tour",
+          "order": 5,
+          "title": "Run the full forage loop",
+          "instructions": "Exit the farm via the top-left gate. Forage the path up, around Robin's house, and on toward Cindersnap Forest — skip the river. Reach Robin's by ~8:50 AM. Then: forage around the Community Center (start with the weeds to its left), swing through the Bus Stop, return and whack CC weeds top-right going down, head to Marnie's ranch, loop the forest starting top-right going anticlockwise, come back past Haley's, finish at the beach. Carry scythe (weeds) and hoe (artifact spots).",
+          "category": "forage",
+          "wikiUrl": "https://stardewvalleywiki.com/Foraging"
+        },
+        {
+          "id": "y1-spring-d01-artifacts",
+          "order": 6,
+          "timeHint": "donate by 4:00 PM",
+          "title": "Dig artifact spots — donate to Gunther if found",
+          "instructions": "Worm tiles (small wiggling Xs) give artifacts when hoed. If you find one before 4 PM, walk it to the Museum and donate — Gunther pays 250g per first donation, which funds extra parsnip seeds at Pierre's before close.",
+          "category": "donate",
+          "wikiUrl": "https://stardewvalleywiki.com/Artifact_Spot"
+        },
+        {
+          "id": "y1-spring-d01-reserve-forage",
+          "order": 7,
+          "title": "Reserve one of each forageable",
+          "instructions": "Before heading home, set aside one Wild Horseradish, one Daffodil, one Leek, and one Dandelion. Ten of these craft into Spring Seeds at Foraging level 1 — ~70g more value than selling them raw. The same four also cover the Spring Foraging Bundle once the Community Center opens.",
+          "category": "forage",
+          "wikiUrl": "https://stardewvalleywiki.com/Wild_Seeds",
+          "bundleContext": {
+            "bundle": "Spring Foraging Bundle (Crafts Room)",
+            "note": "Requires 1 Wild Horseradish, 1 Daffodil, 1 Leek, 1 Dandelion. Stash one of each in a chest now — the CC unlocks later this season."
+          }
+        },
+        {
+          "id": "y1-spring-d01-return-and-plant",
+          "order": 8,
+          "timeHint": "home by 6:00 PM",
+          "title": "Return to farm and plant parsnips",
+          "instructions": "Back at the farm by 6 PM. Plant as many of the harvested parsnip seeds as you can on the cleared ground. Eat a forageable for energy if needed — just don't burn through everything.",
+          "category": "plant",
+          "wikiUrl": "https://stardewvalleywiki.com/Parsnip"
+        },
+        {
+          "id": "y1-spring-d01-clear-south-exit",
+          "order": 9,
+          "title": "Clear the southern farm exit",
+          "instructions": "Use whatever energy is left to clear the path leading off the southern edge of the farm. You'll want it open for tomorrow's beach run.",
+          "category": "clear"
+        },
+        {
+          "id": "y1-spring-d01-end-of-day",
+          "order": 10,
+          "timeHint": "before sleep",
+          "title": "Do not use the shipping bin tonight",
+          "instructions": "Keep every forageable, parsnip, and artifact — they're worth more as seeds, gifts, and donations than as raw shipping. Expect to hit Foraging level 1 when you sleep.",
+          "category": "reference"
+        }
+      ]
+    }
+  ]
+}
